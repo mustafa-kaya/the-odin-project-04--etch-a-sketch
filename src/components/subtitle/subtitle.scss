@@ -1,0 +1,13 @@
+@use "../../common/variables.scss";
+
+.subtitle {
+  font-family: "Inter", sans-serif;
+  width: 220px;
+  font-size: 12px;
+  font-weight: 700;
+  color: variables.$gray-500;
+  padding-bottom: 5px;
+  border-bottom: 1px solid variables.$gray-200;
+  user-select: none;
+  pointer-events: none;
+}
