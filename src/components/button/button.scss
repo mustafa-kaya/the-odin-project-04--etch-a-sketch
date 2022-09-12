@@ -1,0 +1,80 @@
+@use "../../common/variables.scss";
+
+.button {
+  font-family: "Inter", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: variables.$white;
+
+  &:hover {
+    cursor: pointer;
+    background-color: variables.$gray-50;
+  }
+
+  &:active {
+    background-color: variables.$gray-100;
+  }
+
+  // icon color
+  path {
+    stroke: variables.$gray-300;
+  }
+
+  &:hover &__icon {
+    path {
+      stroke: variables.$gray-500;
+    }
+  }
+
+  &:active &__icon {
+    path {
+      stroke: variables.$gray-900;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 500;
+    color: variables.$gray-300;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &:hover &__text {
+    color: variables.$gray-500;
+  }
+
+  &:active &__text {
+    color: variables.$gray-900;
+  }
+
+  &__icon {
+    pointer-events: none;
+  }
+}
+
+.button--selected {
+  background-color: variables.$gray-100;
+  outline: 2px auto variables.$indigo-400;
+  outline-offset: 2px;
+  pointer-events: none;
+
+  .button__icon {
+    path {
+      stroke: variables.$gray-800;
+    }
+  }
+
+  .button__text {
+    color: variables.$gray-800;
+  }
+}
+
+.button--sm {
+  .button__text {
+    font-size: 12px;
+  }
+}
