@@ -1,0 +1,25 @@
+@use "../../common/variables.scss";
+
+#canvas {
+  display: inline-flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.canvas {
+  overflow: hidden;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  min-width: 514px;
+  max-width: 514px;
+  min-height: 514px;
+  max-height: 514px;
+  border-radius: 10px;
+  border: 1px dashed variables.$gray-400;
+}
+
+.cell {
+  background-color: variables.$white;
+  border: 1px solid variables.$gray-100;
+}
