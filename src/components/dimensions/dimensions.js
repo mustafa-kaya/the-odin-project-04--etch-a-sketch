@@ -12,4 +12,21 @@ function createDimensions() {
   return dimensions;
 }
 
-export { createDimensions };
+function selectDimension() {
+  const dimensions = document.querySelectorAll(".dimensions .button");
+  dimensions.forEach((dimension) => {
+    dimension.addEventListener("click", (event) => {
+      clearDimensionSelection();
+      event.target.classList.add("button--selected");
+    });
+  });
+}
+
+function clearDimensionSelection() {
+  const dimensions = document.querySelectorAll(".dimensions .button");
+  dimensions.forEach((dimension) => {
+    dimension.classList.remove("button--selected");
+  });
+}
+
+export { createDimensions, selectDimension };

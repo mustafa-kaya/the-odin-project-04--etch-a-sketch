@@ -14,4 +14,21 @@ function createColors() {
   return colors;
 }
 
-export { createColors };
+function selectColor() {
+  const colors = document.querySelectorAll(".colors .color");
+  colors.forEach((color) => {
+    color.addEventListener("click", (event) => {
+      clearColorSelection();
+      event.target.classList.add("color--selected");
+    });
+  });
+}
+
+function clearColorSelection() {
+  const colors = document.querySelectorAll(".colors .color");
+  colors.forEach((color) => {
+    color.classList.remove("color--selected");
+  });
+}
+
+export { createColors, selectColor };

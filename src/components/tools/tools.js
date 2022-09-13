@@ -12,4 +12,21 @@ function createTools() {
   return tools;
 }
 
-export { createTools };
+function selectTool() {
+  const tools = document.querySelectorAll(".tools .button");
+  tools.forEach((tool) => {
+    tool.addEventListener("click", (event) => {
+      clearToolSelection();
+      event.target.classList.add("button--selected");
+    });
+  });
+}
+
+function clearToolSelection() {
+  const tools = document.querySelectorAll(".tools .button");
+  tools.forEach((tool) => {
+    tool.classList.remove("button--selected");
+  });
+}
+
+export { createTools, selectTool };
