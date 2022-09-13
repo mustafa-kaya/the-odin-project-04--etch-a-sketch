@@ -1,0 +1,12 @@
+@use "../../common/variables.scss";
+
+.logo {
+  font-family: "Inter", sans-serif;
+  display: inline-block;
+  font-size: 20px;
+  padding: 15px 30px;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: variables.$indigo-500;
+  color: variables.$gray-50;
+}
