@@ -1,0 +1,66 @@
+@use "../../common/variables.scss";
+
+.color {
+  width: 24px;
+  height: 24px;
+  opacity: 50%;
+  border-radius: 50%;
+
+  &:hover {
+    opacity: 100%;
+    cursor: pointer;
+  }
+
+  &--selected {
+    opacity: 100%;
+    outline: 2px auto variables.$indigo-400;
+    outline-offset: 2px;
+    pointer-events: none;
+  }
+}
+
+.color {
+  &--1 {
+    background-color: variables.$gray-600;
+  }
+  &--2 {
+    background-color: variables.$red-600;
+  }
+  &--3 {
+    background-color: variables.$orange-600;
+  }
+  &--4 {
+    background-color: variables.$yellow-600;
+  }
+  &--5 {
+    background-color: variables.$lime-600;
+  }
+  &--6 {
+    background-color: variables.$emerald-600;
+  }
+  &--7 {
+    background-color: variables.$cyan-600;
+  }
+  &--8 {
+    background-color: variables.$blue-600;
+  }
+  &--9 {
+    background-color: variables.$violet-600;
+  }
+  &--10 {
+    background-color: variables.$fuchsia-600;
+  }
+  &--11 {
+    background-color: variables.$pink-600;
+  }
+  &--12 {
+    background-color: variables.$rose-600;
+  }
+}
+
+.colors {
+  width: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
