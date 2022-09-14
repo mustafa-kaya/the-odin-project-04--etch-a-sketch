@@ -3,6 +3,7 @@ import { draw } from "../../utils/draw";
 import { createSubtitle } from "../subtitle/subtitle";
 
 function initialColor() {
+  clearColorSelection();
   const initialColor = document.querySelector(".color--1");
   initialColor.classList.add("color--selected");
   draw(window.getComputedStyle(initialColor).backgroundColor);

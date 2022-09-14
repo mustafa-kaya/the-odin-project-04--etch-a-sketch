@@ -13,4 +13,11 @@ function createCanvas(size) {
   return canvas;
 }
 
-export { createCanvas };
+function clearCanvas() {
+  const cells = document.querySelectorAll(".cell");
+  cells.forEach((cell) => {
+    cell.remove();
+  });
+}
+
+export { createCanvas, clearCanvas };
