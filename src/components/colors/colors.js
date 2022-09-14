@@ -1,4 +1,5 @@
 import { createDiv } from "../../common/_functions";
+import { draw } from "../../utils/draw";
 import { createSubtitle } from "../subtitle/subtitle";
 
 function createColors() {
@@ -20,6 +21,7 @@ function selectColor() {
     color.addEventListener("click", (event) => {
       clearColorSelection();
       event.target.classList.add("color--selected");
+      draw(window.getComputedStyle(event.target).backgroundColor);
     });
   });
 }
