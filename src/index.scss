@@ -1,3 +1,26 @@
 // Components
+// @use "./common/normalize.scss";
 @use "./components/button/button.scss";
 @use "./components/subtitle/subtitle.scss";
+@use "./components/logo/logo.scss";
+@use "./components/tools/tools.scss";
+@use "./components/dimensions/dimensions.scss";
+@use "./components/colors/colors.scss";
+@use "./components/sidebar/sidebar.scss";
+@use "./components/canvas/canvas.scss";
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}

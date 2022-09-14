@@ -5,6 +5,7 @@ import { clearCanvas, createCanvas } from "../canvas/canvas";
 import { initialColor } from "../colors/colors";
 
 function initialDimension() {
+  clearDimensionSelection();
   const initialDimension = document.querySelector(".dimensions :nth-child(4)");
   initialDimension.classList.add("button--selected");
 }
