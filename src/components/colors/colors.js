@@ -2,6 +2,12 @@ import { createDiv } from "../../common/_functions";
 import { draw } from "../../utils/draw";
 import { createSubtitle } from "../subtitle/subtitle";
 
+function initialColor() {
+  const initialColor = document.querySelector(".color--1");
+  initialColor.classList.add("color--selected");
+  draw(window.getComputedStyle(initialColor).backgroundColor);
+}
+
 function createColors() {
   const colors = createDiv("colors");
   colors.appendChild(createSubtitle("Colors"));
@@ -33,4 +39,4 @@ function clearColorSelection() {
   });
 }
 
-export { createColors, selectColor };
+export { createColors, selectColor, initialColor };

@@ -3,6 +3,11 @@ import { createSubtitle } from "../subtitle/subtitle";
 import { createButton } from "../button/button";
 import { eraserIcon, pencilIcon, resetIcon } from "../../common/_icon";
 
+function initialTool() {
+  const initialTool = document.querySelector(".tools .button");
+  initialTool.classList.add("button--selected");
+}
+
 function createTools() {
   const tools = createDiv("tools");
   tools.appendChild(createSubtitle("Tools"));
@@ -29,4 +34,4 @@ function clearToolSelection() {
   });
 }
 
-export { createTools, selectTool };
+export { createTools, selectTool, initialTool };

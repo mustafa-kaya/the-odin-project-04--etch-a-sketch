@@ -2,6 +2,11 @@ import { createDiv } from "../../common/_functions";
 import { createSubtitle } from "../subtitle/subtitle";
 import { createButton } from "../button/button";
 
+function initialDimension() {
+  const initialDimension = document.querySelector(".dimensions :nth-child(4)");
+  initialDimension.classList.add("button--selected");
+}
+
 function createDimensions() {
   const dimensions = createDiv("dimensions");
   dimensions.appendChild(createSubtitle("Dimensions"));
@@ -29,4 +34,4 @@ function clearDimensionSelection() {
   });
 }
 
-export { createDimensions, selectDimension };
+export { createDimensions, selectDimension, initialDimension };
